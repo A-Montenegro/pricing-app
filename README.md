@@ -18,9 +18,9 @@ To check the OpenAPI definition, navigate to this link once the application is r
 
 [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
-## Running all Unit and E2E test cases
+## Executing all Unit and E2E test cases
 
-To run the application, navigate to the `main` module and execute the following Maven command:
+To execute all Unit and E2E test cases, navigate to the `main` module and run the following Maven command:
 
 ```bash
 mvn test
