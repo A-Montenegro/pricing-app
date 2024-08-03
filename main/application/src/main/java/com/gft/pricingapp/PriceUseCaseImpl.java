@@ -1,8 +1,8 @@
-package com.gft.pricingapp.adapter;
+package com.gft.pricingapp;
 
-import com.gft.pricingapp.data.dto.PriceDTO;
-import com.gft.pricingapp.data.port.PriceUseCase;
+import com.gft.pricingapp.dto.PriceDTO;
 import com.gft.pricingapp.jparepository.price.PriceRepository;
+import com.gft.pricingapp.usecase.PriceUseCase;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

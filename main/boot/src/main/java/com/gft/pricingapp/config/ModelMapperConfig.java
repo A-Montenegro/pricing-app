@@ -1,6 +1,6 @@
 package com.gft.pricingapp.config;
 
-import com.gft.pricingapp.data.dto.PriceDTO;
+import com.gft.pricingapp.dto.PriceDTO;
 import com.gft.pricingapp.jparepository.price.Price;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;

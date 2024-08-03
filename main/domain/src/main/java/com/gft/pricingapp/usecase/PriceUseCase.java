@@ -1,6 +1,6 @@
-package com.gft.pricingapp.data.port;
+package com.gft.pricingapp.usecase;
 
-import com.gft.pricingapp.data.dto.PriceDTO;
+import com.gft.pricingapp.dto.PriceDTO;
 
 import java.time.LocalDateTime;
 

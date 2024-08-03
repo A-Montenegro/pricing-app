@@ -1,8 +1,8 @@
 package com.gft.pricingapp.price;
 
 
-import com.gft.pricingapp.data.dto.PriceDTO;
-import com.gft.pricingapp.data.port.PriceUseCase;
+import com.gft.pricingapp.dto.PriceDTO;
+import com.gft.pricingapp.usecase.PriceUseCase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

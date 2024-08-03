@@ -2,12 +2,14 @@ package com.gft.pricingapp.price;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
 @Data
+@AllArgsConstructor
 public class PriceRequest {
 
     @NotNull(message = "Product ID must not be null")

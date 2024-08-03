@@ -1,4 +1,4 @@
-package com.gft.pricingapp.data.dto;
+package com.gft.pricingapp.dto;
 
 import lombok.Data;
 
