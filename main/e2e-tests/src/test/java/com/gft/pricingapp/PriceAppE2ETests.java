@@ -1,7 +1,6 @@
 package com.gft.pricingapp;
 
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +13,7 @@ import static org.hamcrest.Matchers.startsWith;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class PriceAppE2ETests {
+class PriceAppE2ETests {
 
     @LocalServerPort
     private int port;
@@ -26,8 +25,8 @@ public class PriceAppE2ETests {
     }
 
     @Test
-    public void testGetExistingPrice() {
-        Response response = RestAssured.given()
+    void testGetExistingPrice() {
+        RestAssured.given()
                 .queryParam("productId", 35455)
                 .queryParam("brandId", 1)
                 .queryParam("applicationDate", "2020-06-14T10:00:00")
@@ -41,8 +40,8 @@ public class PriceAppE2ETests {
     }
 
     @Test
-    public void testGetNotExistingPrice() {
-        Response response = RestAssured.given()
+    void testGetNotExistingPrice() {
+        RestAssured.given()
                 .queryParam("productId", 77524)
                 .queryParam("brandId", 1)
                 .queryParam("applicationDate", "2020-06-14T16:00:00")
@@ -56,8 +55,8 @@ public class PriceAppE2ETests {
     }
 
     @Test
-    public void testGetPriceBadRequestWrongProduct() {
-        Response response = RestAssured.given()
+    void testGetPriceBadRequestWrongProduct() {
+        RestAssured.given()
                 .queryParam("productId", -35455)
                 .queryParam("brandId", 1)
                 .queryParam("applicationDate", "2020-06-14T21:00:00")
@@ -71,8 +70,8 @@ public class PriceAppE2ETests {
     }
 
     @Test
-    public void testGetPriceBadRequestWrongBrand() {
-        Response response = RestAssured.given()
+    void testGetPriceBadRequestWrongBrand() {
+        RestAssured.given()
                 .queryParam("productId", 35455)
                 .queryParam("applicationDate", "2020-06-14T21:00:00")
                 .when()
@@ -85,8 +84,8 @@ public class PriceAppE2ETests {
     }
 
     @Test
-    public void testGetPriceBadRequestWrongApplicationDate() {
-        Response response = RestAssured.given()
+    void testGetPriceBadRequestWrongApplicationDate() {
+        RestAssured.given()
                 .queryParam("productId", 35455)
                 .queryParam("applicationDate", "20-06-14T21:00:00")
                 .when()
