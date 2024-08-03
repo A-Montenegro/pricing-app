@@ -8,6 +8,13 @@
     <version>1.0-SNAPSHOT</version>
     <name>technical-test</name>
     <description>Technical test for GFT</description>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <packaging>pom</packaging>
 
     <modules>
@@ -16,6 +23,7 @@
         <module>domain</module>
         <module>infrastructure</module>
         <module>api-rest</module>
+        <module>e2e-tests</module>
     </modules>
 
     <properties>
